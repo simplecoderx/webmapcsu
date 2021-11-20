@@ -66,6 +66,12 @@ if (isset($_POST["resetPassword"])) {
   <link href="assets/img/csu-icon.png" rel="apple-touch-icon">
 
   <title>Forgot Password | WebMapCSU</title>
+  <style>
+    ::-webkit-scrollbar {
+      width: 0px;
+  }
+  </style>
+
 </head>
 
 <body>
@@ -91,7 +97,7 @@ if (isset($_POST["resetPassword"])) {
             Don't panic, you can still access the portal by entering your email address and continue your experience.
           </p>
         </div>
-        <img src="img/log.svg" class="image" alt="" />
+        <img src="img/forgot2.svg" class="image" alt="" />
       </div>
     </div>
   </div>

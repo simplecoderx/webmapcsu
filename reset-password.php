@@ -16,7 +16,7 @@ if (isset($_POST["resetPassword"])) {
   if ($password === $cpassword) {
     $sql = "UPDATE users SET password='$password' WHERE token='{$_GET["token"]}'";
     mysqli_query($conn, $sql);
-    header("Location: index.php");
+    header("Location: register.php");
   } else {
       echo "<script>alert('Password not matched.');</script>";
   }
@@ -38,6 +38,11 @@ if (isset($_POST["resetPassword"])) {
 
   <title>Reset Password | WebMapCSU</title>
 </head>
+<style>
+    ::-webkit-scrollbar {
+      width: 0px;
+  }
+  </style>
 
 <body>
   <div class="container">
@@ -63,11 +68,10 @@ if (isset($_POST["resetPassword"])) {
         <div class="content">
           <h3>Reset Password ?</h3>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-            ex ratione. Aliquid!
+            Never be disappointed by not signing in successfully. You can still reset your password. Follow the simple steps and you're good to go!
           </p>
         </div>
-        <img src="img/log.svg" class="image" alt="" />
+        <img src="img/reset.svg" class="image" alt="" />
       </div>
     </div>
   </div>

@@ -1,16 +1,3 @@
-<?php
-
-session_start();
-
-error_reporting(0);
-
-if (!isset($_SESSION["user_id"])) {
-    header("Location: index.php");
-}
-
-include 'config.php';
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,13 +5,13 @@ include 'config.php';
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Home | WebMapCSU</title>
+  <title>WebMapCSU | About Us</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
-  <!-- Favicons -->
+   <!-- Favicons -->
   <link href="assets/img/csu-icon.png" rel="icon">
   <link href="assets/img/csu-icon.png" rel="apple-touch-icon">
+
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -49,53 +36,49 @@ include 'config.php';
   ======================================================== -->
 </head>
 <style>
-  .scroll{
-  background-color: #fed9ff;
-  width: 250px;
-  height: 550px;
-  overflow:auto;
-  text-align:justify;
-  padding: 20px;
-}
 ::-webkit-scrollbar {
       width: 0px;
       background-color: green;
   }
+  #hero {
+  width: 100%;
+  height: 80vh;
+  background: url("../img/csu.png") top center;
+  background-size: cover;
+  position: relative;
+  }
 </style>
+
 <body>
 
-  <!-- ======= Header ======= -->
+ <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="home.php">WebMapCSU</a></h1>
+      <h1 class="logo me-auto"><a href="home.html">WebMapCSU</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" href="home.php">Home</a></li>
-          <li><a href="about.php">About Us</a></li>
-          <li><a href="contact.php">Contact Us</a></li>
+          <li><a  href="home.html">Home</a></li>
+          <li><a class="active" href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
-      <a href="logout.php" class="get-started-btn">Sign Out</a>
-
+      <a href="register.php" class="get-started-btn">Sign Up</a>
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex justify-content-center align-items-center">
-    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Be one of US!<br>Be a CSUan!</h1>
-      <h2 style="text-align: left; ">A map that you deserve. Explore. Navigate. Virtual tour of Caraga State University - Main Campus will give you experience in seeing the university anytime and anywhere</h2>
-      <a href="viewmap.php" class="btn-get-started">View Map</a>
-    </div>
-  </section><!-- End Hero -->
-
   <main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>The team establish the factors that would have leads to success and how such success factors can help people in the university. Proposing a new project idea in the university is a sharing of responsibility as a member of campus. To achieve a common objective, excellent leadership and collaboration among members are vital, having the same outlook and working toward it under the guidance of a committed, active, and loyal team. Engaged members and leaders are critical to the success of any organization.. </p>
+      </div>
+    </div><!-- End Breadcrumbs -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -103,18 +86,16 @@ include 'config.php';
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/thisfor4.png" class="img-fluid" alt="">
+            <img src="assets/img/course-3.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>This is for</h3>
+            <h3>What motivates our team?</h3>
             <p class="fst-italic">
-            Student, teachers, guard and motorcycle drivers benefit, considering that CSU is a huge area that may lead confusion of ways and tricky situation. This will be very beneficial especially for newbie or freshman. With this page help you to:
+             The Caraga State University is a broad area. Every year it always has new people like students, teachers, and staff who confuse ways and buildings or offices in the university. Inside the campus, it has motor vehicles since it's too far to walk from and walk to the entrance gate. However, there are times that it is unreachable when the location of a person is too far from the vehicle's area or entrance gate. 
+            <p class="fst-italic">
+              This project attempts to find the solution to one of the struggles of every people in the university
+
             </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Easily locate the building they are looking for</li>
-              <li><i class="bi bi-check-circle"></i> Help you to have an overview about a certain infrastructure by providing pictures for visualization</li>
-              <li><i class="bi bi-check-circle"></i> Provides contact information of campus transportations such as tricycles (who are in a hurry or emergency can easily grab a transportation vehicle through the given contact information. )</li>
-            </ul>
 
           </div>
         </div>
@@ -123,7 +104,7 @@ include 'config.php';
     </section><!-- End About Section -->
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts section-bg">
+   <section id="counts" class="counts section-bg">
       <div class="container">
 
         <div class="row counters">
@@ -148,71 +129,86 @@ include 'config.php';
             <p>Tricycle Drivers</p>
           </div>
 
-
-
         </div>
 
       </div>
     </section><!-- End Counts Section -->
 
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
       <div class="container" data-aos="fade-up">
 
-        <div class="row">
-          <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="content">
-              <h3>Why this is Important?</h3>
-              <p>
-                 Enrolling on prestigious universities usually owned a large-scale area comprising numbers of buildings that are categorized in terms of departments and its use. Caraga State University is nestled in a 232-hectare area, 32 hectares of which is allocated for academic buildings & support facilities including a Gymnasium, while the remaining 200 hectare of land is for production, research and extension projects of the University. Freshmen are not that familiar about buildings, room numbers and landmarks inside the campus.
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>What is our saying</p>
+        </div>
 
-              </p>
-              <div class="text-center">
-                <a href="about.php" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+        <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/11.jpg" class="testimonial-img" alt="">
+                  <h3>Uzzhiel Cebrian</h3>
+                  <h4>Designer and Programmer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    “If we could first know where we are, and whither we are tending, we could better judge what to do, and how to do it.” 
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-receipt"></i>
-                    <h4>Easy to Use</h4>
-                    <p>We provide a friendly website for you</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-cube-alt"></i>
-                    <h4>Quality Content</h4>
-                    <p>Good content written by the team</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-images"></i>
-                    <h4>Free access</h4>
-                    <p>Free to open website anytime and anywhere</p>
-                  </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/lynn.jpg" class="testimonial-img" alt="">
+                  <h3>Lynn Villacorta</h3>
+                  <h4>Designer and programmer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                   Never be afraid of discovering new things, we all have spaces for growth and progress.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
                 </div>
               </div>
-            </div><!-- End .content-->
+            </div><!-- End testimonial item -->
+
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/angelica.jpg" class="testimonial-img" alt="">
+                  <h3>Angelica Sotis</h3>
+                  <h4>Designer and Programmer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                   "We only live once, thus every moment is a gift and from everyday we learn from it." 
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
           </div>
+          <div class="swiper-pagination"></div>
         </div>
 
       </div>
-    </section><!-- End Why Us Section -->
+    </section><!-- End Testimonials Section -->
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
+ <!-- ======= Footer ======= -->
   <footer id="footer">
 
 
     <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
+          <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
    
          <div class="container">
@@ -224,7 +220,7 @@ include 'config.php';
               Ampayon, Butuan City<br>
               Philippines <br><br>
               <strong>Phone:</strong> +1 1234 1234<br>
-              <strong>Email:</strong> Uzzhielanglelynn@gmail.com<br>
+              <strong>Email:</strong>Uzzhielanglelynn@gmail.com<br>
             </p>
           </div>
     </div>
@@ -252,7 +248,6 @@ include 'config.php';
       </div>
     </div>
   </footer><!-- End Footer -->
-
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
