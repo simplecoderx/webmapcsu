@@ -13,13 +13,11 @@
     <!--Only for demo purpose - no need to add.-->
     <link rel="stylesheet" href="css.tricycle/demo.css" />
 	  <link rel="stylesheet" href="css.tricycle/styles.css">
+
+    <!-- Favicons -->
+    <link href="../assets/img/csu-icon.png" rel="icon">
+    <link href="../assets/img/csu-icon.png" rel="apple-touch-icon">
 </head>
-<style>
-  ::-webkit-scrollbar {
-      width: 0px;
-      background-color: green;
-  }
-</style>
 <body>
 
 <header class="ScriptHeader">

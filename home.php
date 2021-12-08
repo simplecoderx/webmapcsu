@@ -48,20 +48,6 @@ include 'config.php';
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-<style>
-  .scroll{
-  background-color: #fed9ff;
-  width: 250px;
-  height: 550px;
-  overflow:auto;
-  text-align:justify;
-  padding: 20px;
-}
-::-webkit-scrollbar {
-      width: 0px;
-      background-color: green;
-  }
-</style>
 <body>
 
   <!-- ======= Header ======= -->

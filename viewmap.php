@@ -48,20 +48,6 @@ include 'config.php';
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-<style>
-  .scroll{
-  background-color: #fed9ff;
-  width: 250px;
-  height: 550px;
-  overflow:auto;
-  text-align:justify;
-  padding: 20px;
-}
-::-webkit-scrollbar {
-      width: 0px;
-      background-color: green;
-  }
-</style>
 <body>
     <div>
   <!-- ======= Header ======= -->
@@ -75,7 +61,7 @@ include 'config.php';
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="active" href="home.php">Home</a></li>
-          <li><a href="aboutc.php">About Us</a></li>
+          <li><a href="about.php">About Us</a></li>
          <li><a href="viewmap.php">Map</a></li>
          <li class="dropdown"><a href="#"><span>Buildings</span> <i class="bi bi-chevron-down"></i></a>
             <ul class="scroll">

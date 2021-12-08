@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,27 +37,6 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-<style>
-  .scroll{
-  background-color: #fed9ff;
-  width: 250px;
-  height: 550px;
-  overflow:auto;
-  text-align:justify;
-  padding: 20px;
-}
-::-webkit-scrollbar {
-      width: 0px;
-      background-color: green;
-  }
-  #hero {
-  width: 100%;
-  height: 80vh;
-  background: url("img/csuu.png") top center;
-  background-size: cover;
-  position: relative;
-  }
-</style>
 <body>
 
   <!-- ======= Header ======= -->

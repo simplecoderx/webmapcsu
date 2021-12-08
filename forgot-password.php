@@ -66,12 +66,6 @@ if (isset($_POST["resetPassword"])) {
   <link href="assets/img/csu-icon.png" rel="apple-touch-icon">
 
   <title>Forgot Password | WebMapCSU</title>
-  <style>
-    ::-webkit-scrollbar {
-      width: 0px;
-  }
-  </style>
-
 </head>
 
 <body>

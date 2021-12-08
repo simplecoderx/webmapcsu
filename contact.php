@@ -49,12 +49,6 @@ include 'config.php';
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-<style>
-::-webkit-scrollbar {
-      width: 0px;
-      background-color: green;
-  }
-</style>
 <body>
     
  <!-- ======= Header ======= -->

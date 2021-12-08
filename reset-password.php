@@ -38,12 +38,6 @@ if (isset($_POST["resetPassword"])) {
 
   <title>Reset Password | WebMapCSU</title>
 </head>
-<style>
-    ::-webkit-scrollbar {
-      width: 0px;
-  }
-  </style>
-
 <body>
   <div class="container">
     <div class="forms-container">
