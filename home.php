@@ -5,7 +5,7 @@ session_start();
 error_reporting(0);
 
 if (!isset($_SESSION["user_id"])) {
-    header("Location: register.php");
+    header("Location: index.php");
 }
 
 include 'config.php';
