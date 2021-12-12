@@ -7,9 +7,8 @@ session_start();
 error_reporting(0);
 
 if (isset($_SESSION["user_id"])) {
-  header("Location: register.php");
+  header("Location: home.php");
 }
-
 
 if (isset($_POST["signup"])) {
   $full_name = mysqli_real_escape_string($conn, $_POST["signup_full_name"]);
@@ -43,8 +42,7 @@ if (isset($_POST["signup"])) {
       </head>
       <body>
       <p><strong>Dear {$full_name},</strong></p>
-      <p>Hola!</p>
-      <p>Thanks for registering! Verify your email to access our website. Click below link to verify your email.</p>
+      <p>Thanks for registration! Verify your email to access our website. Click below link to verify your email.</p>
       <p><a href='{$base_url}verify-email.php?token={$token}'>Verify Email</a></p>
       </body>
       </html>
@@ -77,43 +75,120 @@ if (isset($_POST["signin"])) {
   if (mysqli_num_rows($check_email) > 0) {
     $row = mysqli_fetch_assoc($check_email);
     $_SESSION["user_id"] = $row['id'];
-    header("Location: viewmap.php");
+    header("Location: home.php");
   } else {
     echo "<script>alert('Login details is incorrect. Please try again.');</script>";
   }
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
-
-  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
-  <META HTTP-EQUIV="Expires" CONTENT="-1">
-  
   <!-- Favicons -->
   <link href="assets/img/csu-icon.png" rel="icon">
   <link href="assets/img/csu-icon.png" rel="apple-touch-icon">
 
   <title>Registration | WebMapCSU</title>
+  <style>
+  p{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 20px;
+  }
+  h1{
+    text-align: center;
+    padding: 1em;
+    display: inline-block;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #5fcf80;
+    font-family: "Raleway", sans-serif;
+    margin-left:5em;
+  }
+  a{
+    color:black;
+    text-decoration: none;
+    margin-right: 15em;
+    text-align:center;
+  }
+  header a:hover{
+    color:#86db9f;
+    text-decoration: none;
+  }
+  a.first{
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #37423b;
+    white-space: nowrap;
+    transition: 0.3s;
+    display: inline-block;
+    padding-top: 2em;
+  }
+  a.second{
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #37423b;
+    white-space: nowrap;
+    transition: 0.3s;
+    display: inline-block;
+    padding-top: 2em;
+  }
+  a.third{
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #37423b;
+    white-space: nowrap;
+    transition: 0.3s;
+    display: inline-block;
+    padding-top: 2em;
+  }
+  @media screen and (min-width: 500px) {
+    a.first {
+    margin: 0 15px 0 0;
+    margin-left:5em;
+    }
+    a.second {
+      margin: 0 15px 0 0;
+    }
+    a.third {
+      margin: 0 15px 0 0;
+    }
+}
+  </style>
 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 </head>
 <body>
-<script>
-$(document).ready(function() {
-    function disableBack() { window.history.forward() }
-    window.onload = disableBack();
-    window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
-});</script>
-  <div class="container">
+<div class="container-align d-flex">
+  <header>
+  <nav>
+    <h1 class="logo me-auto" ><a style="color: #5fcf80;" href="home.php">WebMapCSU</a></h1>
+    <a class="first" href="home.php">Home</a>
+    <a class="second" href="about.php">About Us</a>
+    <a class="third" href="contact.php">Contact Us</a></nav>
+</header>
+</div>
+<div class="container">
     <div class="forms-container">
       <div class="signin-signup">
         <form action="" method="post" class="sign-in-form">

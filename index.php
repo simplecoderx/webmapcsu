@@ -1,3 +1,18 @@
+<?php
+
+include 'config.php';
+
+session_start();
+
+error_reporting(0);
+
+if (isset($_SESSION["user_id"])) {
+  header("Location: home.php");
+  exit;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

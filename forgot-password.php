@@ -7,7 +7,7 @@ session_start();
 error_reporting(0);
 
 if (isset($_SESSION["user_id"])) {
-  header("Location: home.php");
+  header("Location: .");
 }
 
 if (isset($_POST["resetPassword"])) {
